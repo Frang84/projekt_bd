@@ -1,0 +1,114 @@
+1. Zwierzeta
+
+ID zwierzaka - klucz glowny
+imie - NULL
+gatunek
+rasa ID - brak NULL
+znaleziony
+wiek - zmieniajacy sie w czasie
+waga
+plec 
+opis
+sterylizacja
+
+
+2. rasa
+
+rasa ID - klucz
+gatunek
+rasa
+
+
+3. Statusy
+
+ID statusu
+nazwa statusu
+
+
+4. statusy zwierzat
+
+Id zwierzaka
+ID statusu
+
+
+5. adoptujacy
+
+id adoptujacego
+adres
+telefon
+wiek
+imie
+nazwisko
+
+
+6.zatrudniony
+
+id czlowieka
+adres
+telefon
+wiek
+imie
+nazwisko
+pesel
+
+
+7. pracownicy
+
+id czlowieka
+data przyjecia
+pensja
+
+
+8. wolontariusze
+
+id czlowieka
+ilosc godzin
+
+
+9. boksy
+
+id boksu
+id zwierzaka
+gatunek
+
+10. urlopy
+
+id czlowieka
+od
+do
+
+
+11. adopcje
+id adoptujacego
+id zwierzaka
+
+
+12.specjalne potrzeby
+
+id zwierzaka
+opis
+
+
+13. karmy
+id karmy
+nazwa 
+ilosc w schronisku 
+cena 
+dostawca
+
+14.jedzenie
+id zwierzaka
+id karmy
+
+15. opiekuni 
+id zwierzaka 
+id opiekuna
+
+
+16. gatunki
+
+gatunek
+
+
+
+ 
