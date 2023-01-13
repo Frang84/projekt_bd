@@ -1,4 +1,5 @@
-1. Zwierzeta
+1. Zwierzeta 
+Tabela zawierajaca podstawowe informacje o przyjetym zwierzaku. Opis oraz inne dane 
 
 ID zwierzaka - klucz glowny
 imie - NULL
@@ -12,7 +13,9 @@ opis
 sterylizacja
 
 
-2. rasa
+2. rasa 
+Tabela pozwala dodac rasy aby nie trzeba bylo za kadym razem wpisywac ich recznie przy przyjmowaniu zwierzaka do schroniska, zamiast tego mozna poslugiwa 
+sie liczbami. Na wszelki wypadek rasa jest dopasowana do gatunku 
 
 rasa ID - klucz
 gatunek
@@ -20,18 +23,25 @@ rasa
 
 
 3. Statusy
+Tabela zawiera takie statusy jak: 
+-zaadoptowany 
+-w trakcie identyfikacji 
+-do adopcji
+pozawala ona na szybsze wprowadzanie informacji do systemu po przez wybieranie numru statusu
 
 ID statusu
 nazwa statusu
 
 
-4. statusy zwierzat
+4. statusy zwierzat 
+pozwala na dopasowanie statusu zwierzaka do jego id 
 
 Id zwierzaka
 ID statusu
 
 
-5. adoptujacy
+5. adoptujacy 
+Informacje o tym kto adoptuje naszego poodopiecznego
 
 id adoptujacego
 adres
@@ -42,6 +52,7 @@ nazwisko
 
 
 6.zatrudniony
+przyklad dziedziczenie '' w tym przypadku pod klasy to pracownik i wolontariusz 
 
 id czlowieka
 adres
