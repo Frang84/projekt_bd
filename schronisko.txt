@@ -1,5 +1,6 @@
 1. Zwierzeta 
-Tabela zawierajaca podstawowe informacje o przyjetym zwierzaku. Opis oraz inne dane 
+Tabela zawierajaca podstawowe informacje o przyjetym zwierzaku. Opis oraz inne dane, w tym przypadku zastosowany jest model dziedziczenia 'table per class hierarchy'
+poniewaz kazde zwierze w schronisku bedzie miec takie same atrybuty.
 
 ID zwierzaka - klucz glowny
 imie - NULL
@@ -52,7 +53,7 @@ nazwisko
 
 
 6.zatrudniony
-przyklad dziedziczenie '' w tym przypadku pod klasy to pracownik i wolontariusz 
+przyklad dziedziczenie 'table per subclass' w tym przypadku podklasy to pracownik i wolontariusz 
 
 id czlowieka
 adres
@@ -64,6 +65,7 @@ pesel
 
 
 7. pracownicy
+podklasa zatrudniony
 
 id czlowieka
 data przyjecia
@@ -71,18 +73,21 @@ pensja
 
 
 8. wolontariusze
+podklasa zatrudniony
 
 id czlowieka
 ilosc godzin
 
 
 9. boksy
+informacje o tym jakie zwierzeta naleza do jakiego bosku. Informacje o tym jakie gatunki znajdują się w boksie (można włożyć kota i psa do jednego boksu)
 
 id boksu
 id zwierzaka
 gatunek
 
 10. urlopy
+tabela do urlopow 
 
 id czlowieka
 od
@@ -90,6 +95,7 @@ do
 
 
 11. adopcje
+tabela ktora dopasowywuje adoptujacego do adpotowanego zwierzaka 
 id adoptujacego
 id zwierzaka
 
