@@ -35,7 +35,7 @@ nazwa statusu
 
 
 4. statusy zwierzat 
-pozwala na dopasowanie statusu zwierzaka do jego id 
+pozwala na dopasowanie statusu zwierzaka do jego id. Jeden zwierzak moze miec wiecej niz jeden status np. 'pilne', 'w domu tymczasowym'
 
 Id zwierzaka
 ID statusu
@@ -95,18 +95,22 @@ do
 
 
 11. adopcje
-tabela ktora dopasowywuje adoptujacego do adpotowanego zwierzaka 
+tabela ktora dopasowywuje adoptujacego do adpotowanego zwierzaka. Jeden czlowiek moze adoptowac wiecej niz jednego poodopiecznego ze schroniska
 id adoptujacego
 id zwierzaka
 
 
 12.specjalne potrzeby
+wszyscy poodopieczni maja takie potrzeby jak jedzenie, ale niektore zwierzaki maja inne potrezby. Tabela powstala do opisu niestandardowych potrzeb jak dlugie
+glaskanie po brzuszku. Jeden zwierzak moze miec wiecej niz jedna specjalana potrzebe. Moga byc one ze soba niezwizane 
 
 id zwierzaka
 opis
 
 
 13. karmy
+kazdy poodopieczny schronisak musi jesc. Ta tabela pomaga w organizacji tych kwestii
+
 id karmy
 nazwa 
 ilosc w schronisku 
@@ -114,16 +118,18 @@ cena
 dostawca
 
 14.jedzenie
+jeden zwierzak moze miec wiecej niz jedna karme jaka sie zywi 
 id zwierzaka
 id karmy
 
 15. opiekuni 
+tabela pozwala dopasowac poodopiecznego do opiekuna 
 id zwierzaka 
 id opiekuna
 
 
 16. gatunki
-
+tabela zawiera informacje o tym jakiego gatunku jest poodopieczny i zapobiega
 gatunek
 
 
