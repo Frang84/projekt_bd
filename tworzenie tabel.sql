@@ -70,7 +70,7 @@ Imie NVARCHAR(50),
 [data znalezienia] DATE,
 wiek INT NOT NULL,
 waga INT,
-plec CHAR,
+plec NVARCHAR(6),
 sterylizacja CHAR,
 opis NVARCHAR(1000),
 zdjecie IMAGE,
@@ -178,7 +178,7 @@ CREATE TABLE karmy(
 nazwa NVARCHAR(100),
 ilosc INT,
 Cena MONEY,
-dostawva NVARCHAR(100)
+dostawca NVARCHAR(100)
 )
 
 
