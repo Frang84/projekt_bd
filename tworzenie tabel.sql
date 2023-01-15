@@ -167,7 +167,7 @@ FOREIGN KEY ([ID adoptujacego]) REFERENCES adoptujacy([ID adoptujacego]),
 
 
 CREATE TABLE [specjalne potrzeby](
-[ID Zwierzaka] INT PRIMARY KEY NOT NULL , /*czy jestesmy pewni ze chcemy tu miec primary key. Czy nie powinnismy sami wpisywac tutaj id zwierzaka ktory ma te potrzebe */
+[ID Zwierzaka] INT PRIMARY KEY NOT NULL , 
 opis NVARCHAR(500),
 FOREIGN KEY ([ID Zwierzaka]) REFERENCES Zwierzeta([ID Zwierzaka]),
 )
