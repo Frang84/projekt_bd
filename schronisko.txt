@@ -114,7 +114,7 @@ kazdy poodopieczny schronisak musi jesc. Ta tabela pomaga w organizacji tych kwe
 id karmy
 nazwa 
 ilosc w schronisku 
-cena 
+cena - w przeliczeniu na 100 kg 
 dostawca
 
 14.jedzenie
