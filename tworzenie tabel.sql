@@ -137,7 +137,7 @@ FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego])
 
 CREATE TABLE boksy(
 [ID boksu] INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-[ID Zwierzaka] INT NOT NULL,
+[ID Zwierzaka] INT ,
 [ID gatunku] INT NOT NULL,
 FOREIGN KEY ([ID Zwierzaka]) REFERENCES Zwierzeta([ID Zwierzaka]),
 FOREIGN KEY ([ID gatunku]) REFERENCES gatunki([ID gatunku]),
