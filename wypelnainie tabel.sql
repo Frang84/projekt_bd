@@ -14,6 +14,25 @@ VALUES('Biala',2,1,'Lotos', '2015-10-10',5,2,'W','T','chudy kto stal sie gruby',
 
 /*select * from Zwierzeta*/
 
+
+/* musi byc przed tabea zwierzeta*/
+DECLARE @Counter INT 
+SET @Counter=1
+WHILE ( @Counter <= 50 )
+BEGIN
+      INSERT INTO boksy ([ID gatunku])
+	  VALUES (1)
+    SET @Counter  = @Counter  + 1
+END
+SET @Counter=1
+WHILE ( @Counter <= 50 )
+BEGIN
+      INSERT INTO boksy ([ID gatunku])
+	  VALUES (2)
+    SET @Counter  = @Counter  + 1
+END
+
+
 INSERT INTO gatunki (nazwa)
 VALUES ('pies'),
 ('swinka morska')
@@ -106,24 +125,6 @@ VALUES
 (10,'2019-10-17',6500),
 (11,'2019-10-17',4500)
 
-
-
-DECLARE @Counter INT 
-SET @Counter=1
-WHILE ( @Counter <= 50 )
-BEGIN
-      INSERT INTO boksy ([ID gatunku])
-	  VALUES (1)
-    SET @Counter  = @Counter  + 1
-END
-
-SET @Counter=1
-WHILE ( @Counter <= 50 )
-BEGIN
-      INSERT INTO boksy ([ID gatunku])
-	  VALUES (2)
-    SET @Counter  = @Counter  + 1
-END
 
 
 
