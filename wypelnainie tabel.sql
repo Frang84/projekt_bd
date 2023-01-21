@@ -108,6 +108,24 @@ VALUES
 
 
 
+DECLARE @Counter INT 
+SET @Counter=1
+WHILE ( @Counter <= 50 )
+BEGIN
+      INSERT INTO boksy ([ID gatunku])
+	  VALUES (1)
+    SET @Counter  = @Counter  + 1
+END
+
+SET @Counter=1
+WHILE ( @Counter <= 50 )
+BEGIN
+      INSERT INTO boksy ([ID gatunku])
+	  VALUES (2)
+    SET @Counter  = @Counter  + 1
+END
+
+
 
 
 
