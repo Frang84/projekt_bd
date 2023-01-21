@@ -15,6 +15,11 @@ VALUES('Biala',2,1,'Lotos', '2015-10-10',5,2,'W','T','chudy kto stal sie gruby',
 /*select * from Zwierzeta*/
 
 
+
+INSERT INTO gatunki (nazwa)
+VALUES ('pies'),
+('swinka morska')
+
 /* musi byc przed tabea zwierzeta*/
 DECLARE @Counter INT 
 SET @Counter=1
@@ -31,11 +36,6 @@ BEGIN
 	  VALUES (2)
     SET @Counter  = @Counter  + 1
 END
-
-
-INSERT INTO gatunki (nazwa)
-VALUES ('pies'),
-('swinka morska')
 
 
 INSERT INTO Statusy([nazwa statusu])
