@@ -153,6 +153,61 @@ VALUES (2, '2021-07-03' , '2021-07-17' ),
 
 
 
+INSERT INTO Zwierzeta 
+VALUES
+('Edi',2,5,'SKLEP PAPIERNICZY NIKO','2023-6-24',5,37,'SAMIEC','N','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Armagedon',2,2,'UL. MILA','2023-1-3',6,42,'SAMICA','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Biszop',2,5,'UL. DOBRA','2023-12-15',6,20,'SAMICA','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Dante',2,4,'UL. KROLOWEJ JADWIGI','2023-8-20',4,43,'SAMICA','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Bart',2,3,'SKLEP PAPIERNICZY NIKO','2023-2-3',4,5,'SAMIEC','N','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Albercik',2,3,'STARY RYNEK','2023-4-12',11,27,'SAMIEC','N','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Behemot',2,5,'UL. DOBRA','2023-8-23',7,21,'SAMICA','N','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Donut',2,6,'OKOLICE SZKOLA PODSTAWOWA NUMER 3','2023-4-17',9,27,'SAMICA','N','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Edward',2,1,'UL. KROLOWEJ JADWIGI','2023-5-23',9,11,'SAMIEC','N','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Dylan',2,2,'OKOLICE SZKOLA PODSTAWOWA NUMER 3','2023-12-13',5,9,'SAMICA','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Admin',2,2,'OKOLICE HURTOWNI AGD','2023-2-21',7,9,'SAMICA','N','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Albus',2,2,'UL. MILA','2023-9-19',2,10,'SAMICA','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Ajax',2,2,'UL. MILA','2023-12-1',4,30,'SAMIEC','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Benetton',2,6,'SKLEP PAPIERNICZY NIKO','2023-3-23',5,32,'SAMICA','N','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Bond',2,4,'PLAC ZABAW OBOK SZKOLY','2023-9-28',5,45,'SAMICA','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Budda',2,5,'UL. DOBRA','2023-5-9',9,26,'SAMICA','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Aro',2,5,'UL. SZEROKA','2023-8-15',4,39,'SAMICA','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Desmond',2,5,'UL. DOBRA','2023-12-11',8,32,'SAMIEC','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Bigos',2,5,'LAS BORKOWSKI','2023-8-17',9,26,'SAMICA','N','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Baldwin',2,5,'STARY RYNEK','2023-10-14',3,20,'SAMIEC','T','Kochany kot szuka rak do glaskania i miziania',NULL),
+('Fafik',1,17,'OKOLICE HURTOWNI AGD','2023-3-11',1,27,'SAMIEC','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Dolar',1,7,'STARY RYNEK','2023-9-4',5,13,'SAMIEC','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Happy',1,18,'UL.MARII KONOPNICKIEJ','2023-7-23',6,27,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Corso',1,7,'STARY RYNEK','2023-5-2',11,27,'SAMIEC','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Flapi',1,7,'UL. SZEROKA','2023-4-24',12,31,'SAMIEC','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Imbir',1,18,'SKLEP PAPIERNICZY NIKO','2023-10-9',8,5,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Jawor',1,16,'PLAC ZABAW OBOK SZKOLY','2023-5-16',3,16,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Biszkopt',1,12,'UL. KROLOWEJ JADWIGI','2023-11-6',11,16,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Bobik',1,10,'UL. SZEROKA','2023-6-14',4,9,'SAMIEC','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Brutus',1,15,'UL. RAJSKA','2023-4-7',12,29,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Albin',1,17,'LAS BORKOWSKI','2023-10-8',5,35,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Charlie',1,9,'UL. RAJSKA','2023-11-27',5,34,'SAMICA','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Diego',1,12,'UL. FAJNA','2023-1-14',12,18,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Jumbo',1,12,'UL. RAJSKA','2023-11-22',6,28,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Iwo',1,18,'LAS BORKOWSKI','2023-11-13',2,31,'SAMIEC','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Elvis',1,8,'UL. MILA','2023-6-13',6,9,'SAMIEC','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Grafit',1,18,'LAS BORKOWSKI','2023-3-15',1,39,'SAMICA','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Fafi',1,11,'NOWY RYNEK','2023-4-5',11,24,'SAMICA','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Junior',1,7,'UL. SZEROKA','2023-8-1',6,24,'SAMICA','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Chester',1,15,'LAS BORKOWSKI','2023-2-4',4,19,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Gospel',1,14,'UL. DOBRA','2023-10-10',4,45,'SAMIEC','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Daktyl',1,10,'PLAC ZABAW OBOK SZKOLY','2023-5-10',11,35,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Gaston',1,15,'NOWY RYNEK','2023-4-27',1,19,'SAMIEC','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Hamlet',1,12,'UL. FAJNA','2023-10-11',5,10,'SAMICA','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Irokez',1,16,'UL. RAJSKA','2023-5-26',5,11,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Drops',1,13,'SKLEP PAPIERNICZY NIKO','2023-7-1',8,22,'SAMIEC','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Eddy',1,18,'UL. RAJSKA','2023-4-27',5,33,'SAMIEC','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Borys',1,16,'NOWY RYNEK','2023-4-18',3,26,'SAMIEC','T','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Afro',1,8,'UL. KROLOWEJ JADWIGI','2023-8-27',9,10,'SAMIEC','N','Kochany pies ktory zostal sierota czeka na dom',NULL),
+('Egon',1,11,'OKOLICE SZKOLA PODSTAWOWA NUMER 3','2023-11-3',3,13,'SAMICA','T','Kochany pies ktory zostal sierota czeka na dom',NULL)
+
+
+
 
 		
 
