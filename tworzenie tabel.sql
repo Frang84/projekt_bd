@@ -99,7 +99,7 @@ FOREIGN KEY ([ID statusu]) REFERENCES statusy([ID statusu])
 
 CREATE TABLE adoptujacy(
 [ID adoptujacego] INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-adres NVARCHAR(200) NOT NULL,
+adres NVARCHAR(200) ,
 telefon NVARCHAR(12) NOT NULL,
 wiek int,
 imie NVARCHAR(50),
