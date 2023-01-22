@@ -116,7 +116,7 @@ FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego])
 
 
 CREATE TABLE wolontariusze(
-[ID zatrudnionego] INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+[ID zatrudnionego] INT PRIMARY KEY NOT NULL,
 [Ilosc godzin] INT,
 FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego])
 )
@@ -162,10 +162,12 @@ FOREIGN KEY ([ID Zwierzaka]) REFERENCES Zwierzeta([ID Zwierzaka]),
 
 CREATE TABLE karmy(
 [ID karmy] INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+[ID gatunku] INT NOT NULL,
 nazwa NVARCHAR(100),
 ilosc INT,
 Cena MONEY,
 dostawca NVARCHAR(100)
+FOREIGN KEY ([ID gatunku]) REFERENCES gatunki([ID gatunku]),
 )
 
 
