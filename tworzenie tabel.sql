@@ -1,50 +1,37 @@
-/*IF OBJECT_ID('opiekuni', N'U') IS NOT NULL
+IF OBJECT_ID('opiekuni', N'U') IS NOT NULL
 	drop table opiekuni
-
 IF OBJECT_ID('karmienie', N'U') IS NOT NULL
 	drop table karmienie
-
 IF OBJECT_ID('karmy', N'U') IS NOT NULL
 	drop table karmy
-
 IF OBJECT_ID('specjalne potrzeby', N'U') IS NOT NULL
 	drop table [specjalne potrzeby]
-
 IF OBJECT_ID('adopcje', N'U') IS NOT NULL
 	drop table adopcje
-
 IF OBJECT_ID('boksy', N'U') IS NOT NULL
 	drop table boksy
-
 IF OBJECT_ID('urlopy', N'U') IS NOT NULL
 	drop table urlopy
-
 IF OBJECT_ID('wolontariusze', N'U') IS NOT NULL
 	drop table wolontariusze
-
 IF OBJECT_ID('pracownicy', N'U') IS NOT NULL
 	drop table pracownicy
-
 IF OBJECT_ID('zatrudniony', N'U') IS NOT NULL
 	drop table [zatrudniony]
-
 IF OBJECT_ID('adoptujacy', N'U') IS NOT NULL
 	drop table [adoptujacy]
-
 IF OBJECT_ID('Statusy Zwierzat', N'U') IS NOT NULL
 	drop table [Statusy Zwierzat]
-
 IF OBJECT_ID('Statusy', N'U') IS NOT NULL
 	drop table Statusy
-
 IF OBJECT_ID ( 'Zwierzeta' , N'U') IS NOT NULL 
 	drop table Zwierzeta
-
 IF OBJECT_ID('rasa', N'U') IS NOT NULL
 	drop table rasa
 	
 IF OBJECT_ID('gatunki', N'U') IS NOT NULL
-	drop table gatunki*/
+	drop table gatunki
+
 
 CREATE TABLE gatunki(
 [ID gatunku] INT PRIMARY KEY NOT NULL IDENTITY(1,1),
@@ -121,7 +108,7 @@ pesel NVARCHAR(12) NOT NULL
 
 
 CREATE TABLE pracownicy(
-[ID zatrudnionego] INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+[ID zatrudnionego] INT NOT NULL,
 [data przyjecia] DATE,
 pensja INT,
 FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego])
