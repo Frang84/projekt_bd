@@ -39,13 +39,14 @@ END
 
 
 INSERT INTO Statusy([nazwa statusu])
-VALUES ('do adopcji'),
+VALUES 		('do adopcji'),
 		('dom tymczasowy'),
 		('w trakcie adopcji'),
 		('pilne'),
 		('wkrotce do adopcji'),
 		('w trakcie leczenia'),
-		('do adopcji z domu tymczasowego')
+		('do adopcji z domu tymczasowego'),
+		('adoptowany')
 
 
 INSERT INTO karmy(nazwa,[ID gatunku],ilosc,Cena,dostawca)
