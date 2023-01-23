@@ -1,4 +1,4 @@
-/*WYKURWISTA funkcja zwracajaca koszty karmy dla zwierzat*/
+/*WYKURWISTA funkcja dzieki ktorej mozwmy wybierac dokladne parametry zwierzat*/
 
 CREATE FUNCTION wybieranieParametrow
 (
