@@ -9,10 +9,10 @@ K - Karol
 
 funkcja mowiaca ile wyniosza koszty karmy dla zwierzat -K
 
-funkcja mowiaca ile wyniosza wyplaty dla pracownikow -K
+funkcja mowiaca ile wyniosza wyplaty dla pracownikow -K zrobione
 
 
-funkcja do wybierania parametrów zwierząt -K
+funkcja do wybierania parametrów zwierząt -K ZROBIONE
 
 funckaj ktora zwraca false lub true w zaleznosci czy ilosc pracownikow majacych w tej chwili urlop nie przekracza 20% -E
 
@@ -20,30 +20,39 @@ funkcja zwracajaca dane ile jest pustych boksow dla kota, a ile dla psa -E
 
 ----------------------------------------------------------------------------------------------------
 
-widok kto bierze jaki boks (do osoby dobieramy boks ktorym sie zajmuje) -K
+widok kto bierze jaki boks (do osoby dobieramy boks ktorym sie zajmuje) -K ZROBIONE
 
-widok informacje o zwierzetach, rasa, waga imie, opis, zapotrzebowania,...-K
+widok informacje o zwierzetach, rasa, waga imie, opis, zapotrzebowania,...-K ZROBIONE
 
 widok boks, jaka karma, jakie ma specjalne zapotrzebowania -E
 
 widok o zwierzeta ktore maja status "do adopcji" -E
 
-widok ktory pokazuje psy -K
+widok ktory pokazuje psy -K ZROBIONE
 
 widok ktory pokazuje koty -E
 
+widok psy i koty ktore sa w domu tymczasowym - K
 
 ---------------------------------------------------------------------------------------------------
-procedura ktora dodaje ilosc karmy ktora zostala zakupiona -K
+procedura ktora dodaje ilosc karmy ktora zostala zakupiona -K ZROBIONE
 
 procedura ktora anuluje adopcje zwierzaka. Zwraca mu statusy usuwa go z tabelki adoptowani -E
 
 prcedura ktora usuwa karme. Ile zostalo zjedzone tyle usuwa -E
 
-procedura dodajaca godziny w pracy do wolontariusz -K
+procedura dodajaca godziny w pracy do wolontariusz -K ZROBIONE
 
-procedura do usuwania zwierzaka z zapotrzebowania gdy zostal zaadoptowany lub przslany -E
-do domu tymczasowego 
+procedura ktora przepisuje zwierze ze schroniska do domu tymczasowego. Polega na usunieciu go ze wszsytkich tabel takich jak zapotrzebowanie, opiekuni ... - K
+
+procedura ktora anuluje adopcje -  JESZCZE NIE ALE ZARAZ BEDZIE - E
+
+procedura ktora rozpoczyna adopcje - zmiana statusu oraz dodanie do tabeli adopcje - E
+
+procedura finalizujaca adopcje -E
+
+
+
 
 trigger ktory dodaje pracowniakow (dwoch) do zwierzaka i wybiera tych ktorzy maja najmniej zwierzat - E 
 
@@ -55,4 +64,6 @@ mozna stworzyc date dodania go do bazy schroniska]
 
 trigger ktory automatycznie wrzuca zwierzaka do boksu. - ZROBIONE
 
-trigger ktory jak zaczyna sie adopcja zwierzaka to zmienia mu status -K
+trigger ktory przy zatrudnianu pracownika dodaje czas, tak samo jak ze zwierzeatami - K 
+
+trigger ktory przy usuwaniu pracownika usuwa go z zajmowania sie zwierzetami i znajduje nowego pracownika do zajmowania sie zwierzetami - K
