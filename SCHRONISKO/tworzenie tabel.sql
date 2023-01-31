@@ -62,7 +62,11 @@ sterylizacja CHAR,
 opis NVARCHAR(1000),
 zdjecie IMAGE,
 FOREIGN KEY ([ID gatunku]) REFERENCES gatunki([ID gatunku]),
-FOREIGN KEY ([ID rasy]) REFERENCES rasa([ID rasy])
+FOREIGN KEY ([ID rasy]) REFERENCES rasa([ID rasy]),
+CHECK (wiek > 0),
+CHECK (waga > 0),
+CHECK (sterylizacja = 'T' OR sterylizacja = 'N'),
+CHECK (plec = 'SAMIEC' OR plec = 'SAMICA')	
 )
 
 
@@ -90,7 +94,8 @@ adres NVARCHAR(200) ,
 telefon NVARCHAR(12) NOT NULL,
 wiek int,
 imie NVARCHAR(50),
-nazwisko NVARCHAR(50)
+nazwisko NVARCHAR(50),
+CHECK(wiek >= 18),
 )
 
 
@@ -103,7 +108,8 @@ telefon NVARCHAR(12),
 wiek int,
 imie NVARCHAR(50),
 nazwisko NVARCHAR(50),
-pesel NVARCHAR(12) NOT NULL
+pesel NVARCHAR(12) NOT NULL,
+CHECK(wiek >= 18)
 )
 
 
@@ -111,14 +117,16 @@ CREATE TABLE pracownicy(
 [ID zatrudnionego] INT NOT NULL,
 [data przyjecia] DATE,
 pensja INT,
-FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego])
+FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego]),
+CHECK(pensja > 0)
 )
 
 
 CREATE TABLE wolontariusze(
 [ID zatrudnionego] INT PRIMARY KEY NOT NULL,
 [Ilosc godzin] INT,
-FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego])
+FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego]),
+CHECK([Ilosc godzin] >= 0)
 )
 
 
@@ -128,7 +136,6 @@ CREATE TABLE boksy(
 [ID gatunku] INT NOT NULL,
 FOREIGN KEY ([ID Zwierzaka]) REFERENCES Zwierzeta([ID Zwierzaka]),
 FOREIGN KEY ([ID gatunku]) REFERENCES gatunki([ID gatunku]),
-
 )
 
 
@@ -138,7 +145,8 @@ CREATE TABLE urlopy(
 od DATE,
 do DATE
 PRIMARY KEY ([ID zatrudnionego], od),
-FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego])
+FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego]),
+CHECK(od < do)
 )
 
 
@@ -146,7 +154,7 @@ FOREIGN KEY ([ID zatrudnionego]) REFERENCES zatrudniony([ID zatrudnionego])
 CREATE TABLE adopcje(
 [ID adoptujacego] INT,
 [ID Zwierzaka] INT
-PRIMARY KEY ([ID Zwierzaka]),
+PRIMARY KEY ([ID adoptujacego], [ID Zwierzaka]),
 FOREIGN KEY ([ID Zwierzaka]) REFERENCES Zwierzeta([ID Zwierzaka]),
 FOREIGN KEY ([ID adoptujacego]) REFERENCES adoptujacy([ID adoptujacego]),
 )
@@ -168,6 +176,8 @@ ilosc INT,
 Cena MONEY,
 dostawca NVARCHAR(100)
 FOREIGN KEY ([ID gatunku]) REFERENCES gatunki([ID gatunku]),
+CHECK(cena > 0),
+CHECK(ilosc > 0)
 )
 
 
