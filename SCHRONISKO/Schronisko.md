@@ -206,7 +206,12 @@ DELETE FROM [Statusy Zwierzat] WHERE [ID Zwierzaka] = @IDzwierzaka AND ( [ID sta
 INSERT INTO [Statusy Zwierzat] ([ID statusu] , [ID Zwierzaka] )
 VALUES ( 1, @IDzwierzaka )
 ```
-   -Dodawanie godzin wolontariatu - jest to procedura służąca do dodawania godzin wolontariatu 
+1.Dodawanie godzin wolontariatu - jest to procedura służąca do dodawania godzin wolontariatu  \
+2.Dodawanie karmy - procedura odpowiedzialna za uwzględnianie kupionej karmy  \
+3.Odjemowanie karmy - procedura odpowiedzialna za odjemowanie karmy \
+4.Dom tymczasowy - procedura, ktora przenosi poodopiecznego ze schroniska do domu tymczasowego i uwzględniając to ,że zatrudnione osoby nie musza zajmować się zwierzakiem ,a jego boks może zając inny porzucony przyjaciel \
+5.Anulowanie adopcji - usuwa zwierzaka z tabeli adoptowani \
+
 
 
 
