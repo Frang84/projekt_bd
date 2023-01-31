@@ -20,7 +20,7 @@ Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalnośc
   waga > 0
   sterylizacja = 'T' OR sterylizacja = 'N'
   plec = 'SAMIEC' OR plec = 'SAMICA'
- Adoptujacy:
+Adoptujacy:
   wiek >= 18
 Pracownik 
   pensja > 0
@@ -28,7 +28,7 @@ Wolontariusze:
   Ilosc godzin >= 0
  Urlopy: 
    od < do 
- Karmy: 
+ Karmy:\n 
    cena > 0 
    ilosc > 0
   
