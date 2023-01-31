@@ -8,6 +8,7 @@ Głównym założeniem projektu było stworzenie bazy danych, na której może o
 Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalności. Pozwala na wyszukiwanie zwierząt o odpowiednich parametrach takich jak wielkość, wiek czy też rasa. Możemy także zobaczyć jakie zwierzęta znajdują się obeznie w domu tymczasowym lub zobaczyć szczegółowe zapotrzebowania poodopiecznego. 
 ## Strategie pielęgnowania bazy danych
 1.Utworzenie kopii zapasowych - w wypaku bazy danych schroniska jest to tanie rozwiązanie ze względu na ilośc rekordów, która jest przetrzymywana z tabelach.
+
 2.Zagrożenia wewnętrzne - w tym wypadku należy chronić baze danych przed uzytkownikami, którzy pracuja w schronisku i z jakiegoś powodu celowo chcą zaszkodzić organizacji. W celu zapobiegania takich ataków należy uważac, aby za dużo osób nie miało dostępu do bazy danych jako uprzywilejowany użytkownik. 
 3.Zagrożenia zewnętrzne z wykorzystaniem kodu SQL - aby chronić bazę danych przed tym zagrożeniem należy na bierząco dbać o  sprawdzanie luk w oprogramowaniu.
 ## Diagram ER
