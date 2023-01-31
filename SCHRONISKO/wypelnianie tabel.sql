@@ -33,10 +33,10 @@ VALUES 		('do adopcji'),
 
 INSERT INTO karmy(nazwa,[ID gatunku],ilosc,Cena,dostawca)
 VALUES  ('Favorite',1, 100, 4.19,'Karmex'),
-		('CEBICAN DAILY CARE DLA PSÓW DOROS?YCH',1, 400,6.44,'Karmex'),
+		('CEBICAN DAILY CARE DLA PSï¿½W DOROS?YCH',1, 400,6.44,'Karmex'),
 		('SUCHA KARMA JOSERA JOSIDOG ADULT ECONOMY 15',1, 1500,7.70,'Karmex'),
 		('KARMA MORANDO PRO PUPPY DLA SZCZENI?T KURCZAK',1,324, 8.21, 'POL-KARM'),
-		('Wolf of Wilderness „The Taste Of"',1,1250,25.75,'POL-KARM'),
+		('Wolf of Wilderness ï¿½The Taste Of"',1,1250,25.75,'POL-KARM'),
 		('Purizon Adult',2,305,22.38,'POL-KARM'),
 		('Purizon Adult dla kota, ryba',2,2000,44.50,'Karmex'),
 		('Purizon Kitten, kurczak i ryba',2,345,65.33,'Karmex'),
