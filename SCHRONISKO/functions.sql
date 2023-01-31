@@ -1,3 +1,4 @@
+
 IF OBJECT_ID('[ilosc wolnych boksow]','FN') IS NOT NULL
 DROP FUNCTION [ilosc wolnych boksow]
 
@@ -7,18 +8,17 @@ DROP FUNCTION urlop
 IF OBJECT_ID ('widokKarmienie', 'V') IS NOT NULL  
 DROP VIEW widokKarmienie;
 
-
-IF OBJECT_ID('karmienieInfo','FN') IS NOT NULL
+IF OBJECT_ID('karmienieInfo','IF') IS NOT NULL
 DROP FUNCTION karmienieInfo
 
 IF OBJECT_ID('SumaPensji','FN') IS NOT NULL
 DROP FUNCTION SumaPensji
 
-IF OBJECT_ID('wybieranieParametrow','FN') IS NOT NULL
+IF OBJECT_ID('wybieranieParametrow','IF') IS NOT NULL
 DROP FUNCTION wybieranieParametrow
 
-
 GO
+
 
 CREATE FUNCTION [ilosc wolnych boksow] ( @id INT)
 RETURNS INT
@@ -52,7 +52,8 @@ LEFT JOIN karmienie ON karmienie.[ID Zwierzaka] = Zwierzeta.[ID Zwierzaka]
 LEFT JOIN karmy ON karmienie.[ID karmy] = karmy.[ID karmy]
 LEFT JOIN gatunki ON gatunki.[ID gatunku] = Zwierzeta.[ID gatunku]
 LEFT JOIN boksy ON boksy.[ID Zwierzaka] = Zwierzeta.[ID Zwierzaka]
-
+LEFT JOIN [Statusy Zwierzat] ON Zwierzeta.[ID Zwierzaka] = [Statusy Zwierzat]. [ID Zwierzaka] AND [Statusy Zwierzat].[ID statusu] = 8
+WHERE Zwierzeta.[ID gatunku] = 1 AND [ID statusu] is null
 
 GO
 
@@ -105,22 +106,28 @@ CREATE FUNCTION wybieranieParametrow
 	@wiekZwierzakaDo AS INT,
 
 	@wagaZwierzakaOd AS INT,
-	@wagaZwierzakaDo AS INT
+	@wagaZwierzakaDo AS INT,
+
+	@IDstatusu AS INT
 	)
 RETURNS TABLE
 AS
 RETURN( 
 SELECT 
-[ID Zwierzaka],
+Zwierzeta.[ID Zwierzaka],
 Imie,
 wiek,
 waga,
 rasa.[nazwa rasy],
-opis
+opis,
+[nazwa statusu]
 FROM Zwierzeta
 JOIN rasa ON rasa.[ID rasy] = Zwierzeta.[ID rasy]
+left join [Statusy Zwierzat] ON Zwierzeta.[ID Zwierzaka] = [Statusy Zwierzat].[ID Zwierzaka]
+left join Statusy ON [Statusy Zwierzat].[ID statusu] =Statusy.[ID statusu]
 WHERE   ( (Zwierzeta.wiek BETWEEN @wiekZwierzakaOd AND @wiekZwierzakaDo ) OR (@wiekZwierzakaOd = 0 AND @wiekZwierzakaDo = 0))  AND
 		((Zwierzeta.waga BETWEEN @wagaZwierzakaOd AND @wagaZwierzakaDo) OR (@wagaZwierzakaOd = 0 AND @wagaZwierzakaDo = 0)) AND 
 		(Zwierzeta.[ID Zwierzaka] = @ID or @ID = 0) AND 
-		(Zwierzeta.Imie LIKE @imieZwierzaka or @imieZwierzaka IS NULL)
+		(Zwierzeta.Imie LIKE @imieZwierzaka or @imieZwierzaka IS NULL) AND
+		( (Statusy.[ID statusu] = @IDstatusu ) OR (@IDstatusu = 0 AND Statusy.[ID statusu] = 1))
 )
