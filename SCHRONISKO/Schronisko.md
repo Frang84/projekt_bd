@@ -1,1 +1,2 @@
-#BAZA DANYCH SCHRONISKA
+# BAZA DANYCH SCHRONISKA
+Co roku zwierzęta oddawane są od schronisk. Dzieje się to na skutek śmierci właściciel, braku odpowiedzialności czy też zmiany sytuacji materialnej. Obecnie to ostatni z wyżej wymienionych powodów jest najczęstszą przyczyna decyzji o oddaniu psa lub kota. Schroniska z tego powodu są coraz bardziej obciążone. Nasza baza danych powstała w celu ułatwienia w zarządzaniu ta jakże szczytną instytucją. 
