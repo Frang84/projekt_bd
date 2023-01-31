@@ -635,7 +635,7 @@ END
 5. opiekun - trigger przydziela zwierzakowi dwóch opiekunów, wybiera ich spośród osób zajmujących się najmniejszą ilością zwierząt 
 6. dodanie statusu - każdemu dodanemu zwierzakowi dodaje status wkrótce do adopcji 
 
-#przykładowe zapytania 
+# przykładowe zapytania 
 ```tsql
 
 ```
