@@ -2,6 +2,35 @@ GO
 IF OBJECT_ID(N'dataPrzyjecia',N'TR') IS NOT NULL  
     DROP TRIGGER  dataPrzyjecia 
 
+GO
+CREATE TRIGGER dataPrzyjecia ON Zwierzeta 
+AFTER INSERT 
+AS 
+
+	DECLARE @idColumn INT
+	DECLARE @czasDodania DATE
+
+SELECT @idColumn = MIN( [ID Zwierzaka] ) FROM inserted
+
+WHILE @idColumn IS NOT NULL
+BEGIN
+	SELECT @czasDodania = [data znalezienia] FROM Zwierzeta
+	WHERE [ID Zwierzaka] = @idColumn
+
+	IF @czasDodania is NULL
+		UPDATE Zwierzeta 
+			SET [data znalezienia] = CONVERT(DATE,GETDATE())
+		WHERE [ID Zwierzaka] = @idColumn
+	
+    SELECT @idColumn = MIN( [ID Zwierzaka] ) FROM inserted WHERE [ID Zwierzaka] > @idColumn
+END
+
+
+
+/*GO
+IF OBJECT_ID(N'dataPrzyjecia',N'TR') IS NOT NULL  
+    DROP TRIGGER  dataPrzyjecia 
+
 --wyslij 
 /*trigger ktory dodaje czas wypadku gdy osoba wprowadzajaca czas zapomni go dodac. Minus teo rozwiazanie jest to ze trigger nie dziala*/
 GO
@@ -74,4 +103,4 @@ CREATE PROCEDURE dodajZwierzaka
 		@opis,
 		@zdjecie
 		)
-	END
+	END */
