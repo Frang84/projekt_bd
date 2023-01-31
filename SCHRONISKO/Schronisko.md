@@ -206,6 +206,7 @@ DELETE FROM [Statusy Zwierzat] WHERE [ID Zwierzaka] = @IDzwierzaka AND ( [ID sta
 INSERT INTO [Statusy Zwierzat] ([ID statusu] , [ID Zwierzaka] )
 VALUES ( 1, @IDzwierzaka )
 ```
+   -Dodawanie godzin wolontariatu - jest to procedura służąca do dodawania godzin wolontariatu 
 
 
 
