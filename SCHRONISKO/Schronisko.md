@@ -32,4 +32,10 @@ Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalnośc
      - cena > 0 ,
      - ilosc > 0 .
 
+## Schematy dziedziczenia 
+W tabeli Zwierzęta zastosowaliśmy rodzaj dziedziczenia TBH(Table per Hierarchy), w tym przypadku koty jak i psy mają te same atrybuty. Nie musimy więc tworzyć oddzielnych klas dziedziczących\
+
+
+
+
   
