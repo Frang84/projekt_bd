@@ -302,14 +302,149 @@ left join rasa
 ON Zwierzeta.[ID rasy] = rasa.[ID rasy]
 WHERE Zwierzeta.[ID gatunku] = 2
 ```
-1. boksOsoba - wyświetla informacje o osobie ktora zajmuje sie danym boksem oraz wysiwtla id boksu \ 
-2. psy - widok wyswietlajacy psy \
-3. szczegolyZwierzaka - widok wyswietlajacy szczegółowe informacje na temat zwierzaka oraz jego stanu \
-4. tymczas - widok wyswietlajacy informacje o zwierzetach przebywajacych w domu tymczasowym \
+1. boksOsoba - wyświetla informacje o osobie ktora zajmuje sie danym boksem oraz wysiwtla id boksu 
+2. psy - widok wyswietlajacy psy 
+3. szczegolyZwierzaka - widok wyswietlajacy szczegółowe informacje na temat zwierzaka oraz jego stanu 
+4. tymczas - widok wyswietlajacy informacje o zwierzetach przebywajacych w domu tymczasowym 
 5. dane - wyswietla informacje o tym jakie karmy powinien jesc dany zwierzak oraz jakie ma specjalne potrzeby 
 6. koty - widok wyświetlający tylko koty do adopcji 
 
 ## Funkcje
+```tsql1
+IF OBJECT_ID('[ilosc wolnych boksow]','FN') IS NOT NULL
+DROP FUNCTION [ilosc wolnych boksow]
+
+IF OBJECT_ID('urlop','FN') IS NOT NULL
+DROP FUNCTION urlop
+
+IF OBJECT_ID ('widokKarmienie', 'V') IS NOT NULL  
+DROP VIEW widokKarmienie;
+
+
+IF OBJECT_ID('karmienieInfo','FN') IS NOT NULL
+DROP FUNCTION karmienieInfo
+
+IF OBJECT_ID('SumaPensji','FN') IS NOT NULL
+DROP FUNCTION SumaPensji
+
+IF OBJECT_ID('wybieranieParametrow','FN') IS NOT NULL
+DROP FUNCTION wybieranieParametrow
+
+
+GO
+
+CREATE FUNCTION [ilosc wolnych boksow] ( @id INT)
+RETURNS INT
+BEGIN 
+RETURN (SELECT COUNT(boksy.[ID boksu]) FROM boksy
+	WHERE [ID gatunku] = @id AND [ID Zwierzaka] IS NULL)
+END
+
+GO
+
+
+
+CREATE FUNCTION urlop ( @poczatek DATE, @koniec DATE)
+RETURNS BIT
+BEGIN 
+IF ( SELECT count(*) FROM urlopy
+		WHERE od >= @poczatek AND do <= @koniec
+	 ) < ((SELECT count(*) FROM pracownicy) * 0.2)
+		BEGIN
+		 RETURN 1
+END
+RETURN 0
+END
+
+GO
+
+
+CREATE VIEW widokKarmienie AS 
+SELECT Zwierzeta.[ID Zwierzaka],gatunki.nazwa,Zwierzeta.Imie,karmy.nazwa 'nazwa karmy',boksy.[ID boksu] FROM Zwierzeta
+LEFT JOIN karmienie ON karmienie.[ID Zwierzaka] = Zwierzeta.[ID Zwierzaka]
+LEFT JOIN karmy ON karmienie.[ID karmy] = karmy.[ID karmy]
+LEFT JOIN gatunki ON gatunki.[ID gatunku] = Zwierzeta.[ID gatunku]
+LEFT JOIN boksy ON boksy.[ID Zwierzaka] = Zwierzeta.[ID Zwierzaka]
+
+
+GO
+
+
+CREATE FUNCTION karmienieInfo 
+(
+	 @id INT ,
+	 @imie NVARCHAR(50) ,
+	 @IDboksu INT 
+)
+RETURNS TABLE
+AS 
+RETURN(
+	SELECT * FROM widokKarmienie
+	WHERE (
+	(widokKarmienie.[ID Zwierzaka] = @id OR @id = 0) AND 
+	(widokKarmienie.Imie LIKE @imie OR @imie IS NULL) AND 
+	(widokKarmienie.[ID boksu] = @IDboksu OR @IDboksu = 0)
+	)
+)
+
+
+
+/*"widokKarmienie" uzywany jest w funckji "karmienieInfo", ktora uzywana jest przez osoby pracujace w schronisku. Dzieki tej funckji pracownicy jak i 
+wolontariusze moga dowiedziec sie co moga jesc ich poodopieczni. Uzycie widoku w funckji skraca dlugosc kodu funckji dzieki czemu kod funckji staje sie bardziej 
+przejzysty*/
+
+GO
+
+
+CREATE FUNCTION SumaPensji()
+RETURNS MONEY
+AS 
+BEGIN 
+DECLARE @SUM AS MONEY 
+SELECT @SUM = SUM(pensja) FROM pracownicy
+RETURN @SUM 
+END
+
+
+GO
+
+
+CREATE FUNCTION wybieranieParametrow
+(
+	@ID AS INT = 0,
+	@imieZwierzaka AS NVARCHAR(50) = NULL,
+
+	@wiekZwierzakaOd AS INT,
+	@wiekZwierzakaDo AS INT,
+
+	@wagaZwierzakaOd AS INT,
+	@wagaZwierzakaDo AS INT
+	)
+RETURNS TABLE
+AS
+RETURN( 
+SELECT 
+[ID Zwierzaka],
+Imie,
+wiek,
+waga,
+rasa.[nazwa rasy],
+opis
+FROM Zwierzeta
+JOIN rasa ON rasa.[ID rasy] = Zwierzeta.[ID rasy]
+WHERE   ( (Zwierzeta.wiek BETWEEN @wiekZwierzakaOd AND @wiekZwierzakaDo ) OR (@wiekZwierzakaOd = 0 AND @wiekZwierzakaDo = 0))  AND
+		((Zwierzeta.waga BETWEEN @wagaZwierzakaOd AND @wagaZwierzakaDo) OR (@wagaZwierzakaOd = 0 AND @wagaZwierzakaDo = 0)) AND 
+		(Zwierzeta.[ID Zwierzaka] = @ID or @ID = 0) AND 
+		(Zwierzeta.Imie LIKE @imieZwierzaka or @imieZwierzaka IS NULL)
+)
+```
+1. ilosc wolnych boksow - zwraca liczbe mówiącą ile jest wolnych boksów w schronisku 
+2. widok karmienie - widok używany w funkcji karmienie info 
+3. karmienie info - funkcja zwracajaca tabele z informacjami o tym jakie karmy moze jesc wybrany poodopieczny
+4. sumaPensji - funkcja zwracajaca sume pensji wszystkich pracowników 
+5. wybieranie parametrow - funkcja działająca jako wyszukiwarka, w której wprowadzamy odpowiednie parametry 
+
+## Triggery/Wyzwalacze
 
 
 
