@@ -637,6 +637,42 @@ END
 
 # przykładowe zapytania 
 ```tsql
+SELECT * FROM boks_osoba
+
+SELECT * FROM szczegolyZwierzaka
+
+SELECT * FROM tymczas
+
+SELECT * FROM koty
+ 
+SELECT * FROM psy
+
+SELECT * FROM dane
+
+
+
+EXEC dodawanieGodzinWolontariatu 1,3
+
+EXEC dodawanieKarmy 2,10
+
+EXEC  [odejmowanie karmy] 3,10
+
+EXEC domTyczasowy 3 
+
+EXEC [Anulowanie adopcji] 6
+
+EXEC [Rozpoczecie adopcji] 8, 1
+
+EXEC [status do leczenia] 4
+
+EXEC [status do adopcji] 4
+
+
+SELECT * FROM wybieranieParametrow (0,NULL,1,5,0,15)
+
+SELECT * FROM  SumaPensji()
+
+SELECT * FROM karmienieInfo(1,NULL,0)
 
 ```
 
