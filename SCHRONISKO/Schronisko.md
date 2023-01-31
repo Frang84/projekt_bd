@@ -3,5 +3,5 @@ Co roku zwierzęta oddawane są od schronisk. Dzieje się to na skutek śmierci 
 ## założenia projektu
 Projekt ma na celu stworzenie bazy danych, która będzie przechowywać informacje o zwierzętach jak i opiekunach. baza danych z założenia ma ułatwiać prowadzenie schroniska oraz automatyzować część czynności, które normalnie musieliby robić pracownicy.  
 ## główne założenia 
-Głównym założeniem projektu było stworzenie bazy danych, na której może operowac strona internetowa schroniska. Od strony pracowników baza ta pozwala na podstawowe zarządzanie instytucją. Dzieki naszemu projektowi wiadome są przybliżone koszty jakie schronisko będzie musiało ponieć podczas swojego działania. 
+Głównym założeniem projektu było stworzenie bazy danych, na której może operować strona internetowa schroniska. Osoby chcące zaadoptować swojego wymarzonego pupila powinny móc bez problemu dobrać wielkość, wiek, oraz inne potrzeby przyszłego nowego członka rodziny do swoich upodobań oraz możliwości bytowych. Od strony pracowników baza ta pozwala na podstawowe zarządzanie instytucją. Dzieki naszemu projektowi wiadome są przybliżone koszty jakie schronisko będzie musiało ponieć podczas swojego działania. 
  
