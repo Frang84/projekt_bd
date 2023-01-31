@@ -33,7 +33,7 @@ Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalnośc
      - ilosc > 0 .
 
 ## Schematy dziedziczenia 
-W tabeli Zwierzęta zastosowaliśmy rodzaj dziedziczenia TBH(Table per Hierarchy), w tym przypadku koty jak i psy mają te same atrybuty. Nie musimy więc tworzyć oddzielnych klas dziedziczących \
+W tabeli Zwierzęta zastosowaliśmy rodzaj dziedziczenia TBH(Table per Hierarchy), w tym przypadku koty jak i psy mają te same atrybuty. Nie musimy więc tworzyć oddzielnych klas dziedziczących \\
 W przypadku tabeli Zatrudnieni mamy do czynienia z dziedziczeniem TPC(Table Per Concrete Class). Wolontariusz jak i pracownik mają imie, nazwisko oraz pesel. Pracownik pobiera jednak za swoją pracę wynagrodzenie. 
 
 
