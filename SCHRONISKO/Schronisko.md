@@ -16,10 +16,10 @@ Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalnośc
 ![DIAGRAM ER](https://github.com/Frang84/projekt_bd/blob/583973b373becbd73deb333a53b7afcfceb7e023/obrazy/obraz_2023-01-31_202725425.png)
 ## Dodatkowe więzy integralności bazy danych 
  Zwierzeta: <br />
-  wiek > 0<br />
-   waga > 0 <br />
-  sterylizacja = 'T' OR sterylizacja = 'N'<br />
-  plec = 'SAMIEC' OR plec = 'SAMICA'<br />
+  -wiek > 0<br />
+  -waga > 0 <br />
+  -sterylizacja = 'T' OR sterylizacja = 'N'<br />
+  -plec = 'SAMIEC' OR plec = 'SAMICA'<br />
 Adoptujacy:<br />
   wiek >= 18<br />
 Pracownik <br />
