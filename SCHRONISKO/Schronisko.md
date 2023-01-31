@@ -211,8 +211,9 @@ VALUES ( 1, @IDzwierzaka )
 3.Odjemowanie karmy - procedura odpowiedzialna za odjemowanie karmy \
 4.Dom tymczasowy - procedura, ktora przenosi poodopiecznego ze schroniska do domu tymczasowego i uwzględniając to ,że zatrudnione osoby nie musza zajmować się zwierzakiem ,a jego boks może zając inny porzucony przyjaciel \
 5.Anulowanie adopcji - usuwa zwierzaka z tabeli adoptowani \
+6.Rozpoczecie adopcji - Procedura rozpoczyna adoplcje 
 
-
+## Widoki i funkcje 
 
 
 
