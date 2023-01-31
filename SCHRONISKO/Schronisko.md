@@ -21,14 +21,14 @@ Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalnośc
   -sterylizacja = 'T' OR sterylizacja = 'N'<br />
   -plec = 'SAMIEC' OR plec = 'SAMICA'<br />
 Adoptujacy:<br />
-  wiek >= 18<br />
+  -wiek >= 18<br />
 Pracownik <br />
-  pensja > 0<br />
+ - pensja > 0<br />
 Wolontariusze:<br />
-  Ilosc godzin >= 0<br />
+  -Ilosc godzin >= 0<br />
  Urlopy: <br />
-   od < do <br />
+  - od < do <br />
  Karmy: <br />
-   cena > 0 <br />
-   ilosc > 0<br />
+  - cena > 0 <br />
+   -ilosc > 0<br />
   
