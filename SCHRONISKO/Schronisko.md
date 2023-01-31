@@ -310,7 +310,7 @@ WHERE Zwierzeta.[ID gatunku] = 2
 6. koty - widok wyświetlający tylko koty do adopcji 
 
 ## Funkcje
-```tsql1
+```tsql
 IF OBJECT_ID('[ilosc wolnych boksow]','FN') IS NOT NULL
 DROP FUNCTION [ilosc wolnych boksow]
 
@@ -445,7 +445,7 @@ WHERE   ( (Zwierzeta.wiek BETWEEN @wiekZwierzakaOd AND @wiekZwierzakaDo ) OR (@w
 5. wybieranie parametrow - funkcja działająca jako wyszukiwarka, w której wprowadzamy odpowiednie parametry 
 
 ## Triggery/Wyzwalacze
-```tsql1
+```tsql
 IF OBJECT_ID(N'dataZatrudnienia',N'TR') IS NOT NULL  
     DROP TRIGGER dataZatrudnienia  
 
