@@ -20,11 +20,11 @@ Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalnośc
   - waga > 0 <br />
   - sterylizacja = 'T' OR sterylizacja = 'N'<br />
   - plec = 'SAMIEC' OR plec = 'SAMICA'<br />
-Adoptujacy:<br />
+ Adoptujacy: <br />
   - wiek >= 18<br />
-Pracownik <br />
+ Pracownik: <br />
  - pensja > 0<br />
-Wolontariusze:<br />
+ Wolontariusze:<br />
   - Ilosc godzin >= 0<br />
  Urlopy: <br />
   - od < do <br />
