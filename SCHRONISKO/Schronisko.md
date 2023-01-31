@@ -17,7 +17,7 @@ Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalnośc
 ## Dodatkowe więzy integralności bazy danych 
  Zwierzeta: 
   wiek > 0
-  waga > 0
+  waga > 0 <br />
   sterylizacja = 'T' OR sterylizacja = 'N'
   plec = 'SAMIEC' OR plec = 'SAMICA'
 Adoptujacy:
