@@ -34,7 +34,8 @@ FROM Zwierzeta
 LEFT JOIN gatunki ON gatunki.[ID gatunku] = Zwierzeta.[ID gatunku]
 LEFT JOIN [specjalne potrzeby] ON [specjalne potrzeby].[ID Zwierzaka] = Zwierzeta.[ID Zwierzaka]
 LEFt JOIN rasa ON rasa.[ID rasy] = Zwierzeta.[ID rasy]
-WHERE Zwierzeta.[ID gatunku] = 1
+LEFT JOIN [Statusy Zwierzat] ON Zwierzeta.[ID Zwierzaka] = [Statusy Zwierzat]. [ID Zwierzaka] AND [Statusy Zwierzat].[ID statusu] = 8
+WHERE Zwierzeta.[ID gatunku] = 1 AND [ID statusu] is null
 
 GO
 
@@ -49,6 +50,8 @@ LEFT JOIN rasa ON rasa.[ID rasy] = Zwierzeta.[ID rasy]
 LEFT JOIN gatunki ON gatunki.[ID gatunku] = Zwierzeta.[ID gatunku]
 LEFT JOIN [specjalne potrzeby] ON [specjalne potrzeby].[ID Zwierzaka] = Zwierzeta.[ID Zwierzaka]
 LEFT JOIN boksy ON boksy.[ID Zwierzaka] = Zwierzeta.[ID Zwierzaka]
+LEFT JOIN [Statusy Zwierzat] ON Zwierzeta.[ID Zwierzaka] = [Statusy Zwierzat]. [ID Zwierzaka] AND [Statusy Zwierzat].[ID statusu] = 8
+WHERE [ID statusu] is null
 
 GO
 
@@ -73,12 +76,17 @@ LEFT JOIN boksy AS B
 ON B.[ID Zwierzaka] = Z.[ID Zwierzaka]
 LEFT JOIN [specjalne potrzeby] AS S
 ON Z.[ID Zwierzaka] = S.[ID Zwierzaka]
+WHERE [ID boksu] is not null
 
 GO
 
 
 CREATE VIEW koty AS 
-SELECT Zwierzeta.[ID Zwierzaka] , Imie , [nazwa rasy] , [miejsce znalezienia], [data znalezienia], wiek, waga, plec, sterylizacja, opis, zdjecie FROM Zwierzeta
-left join rasa
-ON Zwierzeta.[ID rasy] = rasa.[ID rasy]
-WHERE Zwierzeta.[ID gatunku] = 2
+SELECT Zwierzeta.[ID Zwierzaka],Zwierzeta.Imie,gatunki.nazwa AS 'Gatunek',Zwierzeta.plec,rasa.[nazwa rasy],Zwierzeta.wiek,Zwierzeta.waga,Zwierzeta.opis, 
+		[specjalne potrzeby].opis AS 'specjalne potrzeby',Zwierzeta.[data znalezienia], Zwierzeta.[miejsce znalezienia],Zwierzeta.sterylizacja
+FROM Zwierzeta 
+LEFT JOIN gatunki ON gatunki.[ID gatunku] = Zwierzeta.[ID gatunku]
+LEFT JOIN [specjalne potrzeby] ON [specjalne potrzeby].[ID Zwierzaka] = Zwierzeta.[ID Zwierzaka]
+LEFt JOIN rasa ON rasa.[ID rasy] = Zwierzeta.[ID rasy]
+LEFT JOIN [Statusy Zwierzat] ON Zwierzeta.[ID Zwierzaka] = [Statusy Zwierzat]. [ID Zwierzaka] AND [Statusy Zwierzat].[ID statusu] = 8
+WHERE Zwierzeta.[ID gatunku] = 2 AND [ID statusu] is null
