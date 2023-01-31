@@ -7,5 +7,7 @@ Głównym założeniem projektu było stworzenie bazy danych, na której może o
 ## możliwości 
 Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalności. Pozwala na wyszukiwanie zwierząt o odpowiednich parametrach takich jak wielkość, wiek czy też rasa. Możemy także zobaczyć jakie zwierzęta znajdują się obeznie w domu tymczasowym lub zobaczyć szczegółowe zapotrzebowania poodopiecznego. 
 ## Diagram ER
-![alt text](https://github.com/Frang84/projekt_bd/blob/583973b373becbd73deb333a53b7afcfceb7e023/obrazy/obraz_2023-01-31_202725425.png)
+![DIAGRAM ER](https://github.com/Frang84/projekt_bd/blob/583973b373becbd73deb333a53b7afcfceb7e023/obrazy/obraz_2023-01-31_202725425.png)
+
+
  
