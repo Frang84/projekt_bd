@@ -18,7 +18,7 @@ VALUES('Biala',2,1,'Lotos', '2015-10-10',5,2,'W','T','chudy kto stal sie gruby',
 
 INSERT INTO gatunki (nazwa)
 VALUES ('pies'),
-('swinka morska')
+       ('kot')
 
 /* musi byc przed tabea zwierzeta*/
 DECLARE @Counter INT 
