@@ -32,7 +32,7 @@ widok ktory pokazuje psy -K ZROBIONE
 
 widok ktory pokazuje koty -E
 
-widok psy i koty ktore sa w domu tymczasowym - K
+widok psy i koty ktore sa w domu tymczasowym - K  ZROBIONE
 
 ---------------------------------------------------------------------------------------------------
 procedura ktora dodaje ilosc karmy ktora zostala zakupiona -K ZROBIONE
@@ -43,7 +43,7 @@ prcedura ktora usuwa karme. Ile zostalo zjedzone tyle usuwa -E
 
 procedura dodajaca godziny w pracy do wolontariusz -K ZROBIONE
 
-procedura ktora przepisuje zwierze ze schroniska do domu tymczasowego. Polega na usunieciu go ze wszsytkich tabel takich jak zapotrzebowanie, opiekuni ... - K
+procedura ktora przepisuje zwierze ze schroniska do domu tymczasowego. Polega na usunieciu go ze wszsytkich tabel takich jak zapotrzebowanie, opiekuni ... - K ZROBIONE
 
 procedura ktora anuluje adopcje -  JESZCZE NIE ALE ZARAZ BEDZIE - E
 
@@ -58,12 +58,12 @@ trigger ktory dodaje pracowniakow (dwoch) do zwierzaka i wybiera tych ktorzy maj
 
 trigger ktory ustala jaka karme moze jesc dane zwierze, procedura ktora to modyfikuje(ktora dodaje karme i odejmuje) NA PODSTAWIE GATUNKU I WIEKU - E
 
-trigger do automatycznego dodawania czasu kiedy zwierzak zostal znaleziony. -K
+trigger do automatycznego dodawania czasu kiedy zwierzak zostal znaleziony. -K ZROBIONE
 [Data znalezeinie moze byc inna od daty dodania go do schroniska. Ewentualnie 
 mozna stworzyc date dodania go do bazy schroniska]
 
 trigger ktory automatycznie wrzuca zwierzaka do boksu. - ZROBIONE
 
-trigger ktory przy zatrudnianu pracownika dodaje czas, tak samo jak ze zwierzeatami - K 
+trigger ktory przy zatrudnianu pracownika dodaje czas, tak samo jak ze zwierzeatami - K ZROBIONE
 
-trigger ktory przy usuwaniu pracownika usuwa go z zajmowania sie zwierzetami i znajduje nowego pracownika do zajmowania sie zwierzetami - K
+trigger ktory przy usuwaniu pracownika usuwa go z zajmowania sie zwierzetami i znajduje nowego pracownika do zajmowania sie zwierzetami - K 
