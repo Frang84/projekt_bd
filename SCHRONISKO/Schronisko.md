@@ -22,14 +22,14 @@ Zaprojektowana przez nas baza danych ma wiele zaimplementowanych funkcjonalnośc
   - plec = 'SAMIEC' OR plec = 'SAMICA' .
  -Adoptujacy: 
    - wiek >= 18 ,
- -Pracownik: 
-  - pensja > 0 .
- -Wolontariusze:
-    - Ilosc godzin >= 0 .
- -Urlopy: 
-    - od < do .
- -Karmy: 
-   - cena > 0 ,
+ - Pracownik: 
+   - pensja > 0 .
+   - Wolontariusze:
+     - Ilosc godzin >= 0 .
+ - Urlopy: 
+     - od < do .
+ - Karmy: 
+     - cena > 0 ,
    - ilosc > 0 .
 
   
