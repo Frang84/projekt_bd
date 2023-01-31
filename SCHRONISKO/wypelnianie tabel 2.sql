@@ -64,6 +64,8 @@ EXEC [finalizacja adopcji] @IDzwierzaka = 1
 EXEC [finalizacja adopcji] @IDzwierzaka = 10
 EXEC [finalizacja adopcji] @IDzwierzaka = 29
 
+INSERT INTO [Statusy Zwierzat] ([ID statusu] , [ID Zwierzaka] )
+VALUES  (4,6), (4,41) , (4,42) ,(7,17) , (7,35) , (7,41) , (7,42)
 
 
 INSERT INTO [specjalne potrzeby] ([ID Zwierzaka] , opis )
