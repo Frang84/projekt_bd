@@ -65,6 +65,36 @@ IF OBJECT_ID('[finalizacja adopcji]','P') IS NOT NULL
 DROP PROC [finalizacja adopcji]
 
 
+CREATE PROCEDURE Synchronizacja 
+AS 
+DECLARE @idColumn INT 
+SELECT @idColumn = MIN(Zwierzeta.[ID Zwierzaka]) FROM Zwierzeta
+WHILE @idColumn IS NOT NULL 
+	BEGIN 
+
+	DECLARE @przyrost INT 
+	DECLARE @dataPrzyjecia DATE 
+
+	SELECT @dataPrzyjecia = Zwierzeta.[data znalezienia] FROM Zwierzeta
+	WHERE @idColumn = Zwierzeta.[ID Zwierzaka]
+	DECLARE @rokPrzyjecia INT = YEAR(@dataPrzyjecia)
+	DECLARE @obecnyRok INT = YEAR(GETDATE())
+	SET @przyrost = @obecnyRok - @rokPrzyjecia
+	DECLARE @obecnyWiek INT
+	
+	SELECT @obecnyWiek = Zwierzeta.wiek FROM Zwierzeta
+	WHERE Zwierzeta.[ID Zwierzaka] = @idColumn
+
+	DECLARE @NowyWiek INT 
+	SET @NowyWiek = @obecnyWiek + @przyrost
+	UPDATE Zwierzeta SET wiek = @NowyWiek
+	WHERE Zwierzeta.[ID Zwierzaka] = @idColumn
+	SELECT @idColumn = MIN(Zwierzeta.[ID Zwierzaka]) 
+	FROM Zwierzeta
+	WHERE @idColumn < Zwierzeta.[ID Zwierzaka]
+
+	END
+
 GO
 
 CREATE PROCEDURE dodawanieGodzinWolontariatu 
