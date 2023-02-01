@@ -676,6 +676,8 @@ SELECT * FROM karmienieInfo(1,NULL,0)
 
 ```
 
+# [skrypt tworzacy baze danych, procedury, widoki, triggery i funkcje](wszystko.sql)
+
 
 
 
