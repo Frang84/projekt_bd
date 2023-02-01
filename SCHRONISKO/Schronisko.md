@@ -244,6 +244,7 @@ VALUES ( 1, @IDzwierzaka )
 6. Rozpoczecie adopcji - Procedura rozpoczyna adoplcje \
 7. status do leczenia - \
 8. status do adopcji 
+9. Synchronizacja - mmodyfikuje wiek zwierzat, bierzemy ich wiek i dodajemy przyrost jaki wystepuje pomiedzy data przyjecia, a obecna data 
 
 ## Widoki 
 ```tsql
